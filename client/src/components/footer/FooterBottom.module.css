@@ -1,0 +1,33 @@
+.container {
+  height: 70px;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.socials {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  margin-right: 60px;
+}
+.socialIcons {
+  width: 40px;
+}
+.copyrights {
+  margin-left: 80px;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .socials {
+    display: none;
+  }
+  .copyrights {
+    margin: auto;
+  }
+}

@@ -1,0 +1,123 @@
+.container {
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: row;
+}
+.divider {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 80px;
+  margin-right: 80px;
+  background: #4e4d93;
+  height: 1px;
+}
+.dividerContainer {
+  background-color: #2a254b;
+}
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  margin: 60px 80px;
+  flex-wrap: wrap;
+}
+.form {
+  margin-left: auto;
+  flex: 1;
+}
+.menuTitle {
+  color: var(--White, #fff);
+  font-family: Clash Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.listItem {
+  list-style: none;
+  color: var(--White, #fff);
+  font-family: Satoshi;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.form {
+  margin: 60px 80px;
+  margin-left: 0;
+  width: 100%;
+}
+.formTitle {
+  color: var(--White, #fff);
+  font-family: Clash Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.formContainer {
+  display: flex;
+  height: 56px;
+  width: 100%;
+}
+.email {
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0;
+  padding-left: 32px;
+  border: 0;
+  max-width: 500px;
+  min-width: 224px;
+  height: 56px;
+  flex: 1;
+}
+.submit {
+  padding: 0;
+  width: 118px;
+  height: 56px;
+  border: 0;
+  color: #2a254b;
+
+  /* Body/Medium */
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .menuContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    margin: 24px 40px;
+    flex-wrap: wrap;
+  }
+  .menu {
+    margin-bottom: 20px;
+  }
+  .formContainer {
+    width: 88%;
+    margin: 24px;
+  }
+  .formTitle {
+    margin: 24px;
+  }
+  .email {
+    width: 100%;
+  }
+  .form {
+    margin: 0;
+  }
+}
