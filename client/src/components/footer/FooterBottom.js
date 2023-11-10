@@ -5,8 +5,30 @@ import InstagramIcon from '../../assets/svg/Instagram'
 import SkypeIcon from '../../assets/svg/Skype'
 import TwitterIcon from '../../assets/svg/Twitter'
 import PinterestIcon from '../../assets/svg/Pinterest'
+import { useState,useEffect } from 'react'
 const FooterBottom = () => {
-  return (
+  const [feedItems, setFeedItems] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/test');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setFeedItems(data);
+        console.log(data); // Log the fetched data directly
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+      }
+    };
+  
+    fetchData();
+  }, []); // eslint-disable-next-line react-hooks/exhaustive-deps
+  
+
+      return (
     <div className={classes.container}>
       <div className={classes.copyrights}>Copyright 2023 Avion LTD</div>
       <div className={classes.socials}>
