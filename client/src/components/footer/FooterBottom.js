@@ -51,6 +51,9 @@ const FooterBottom = () => {
             <PinterestIcon/>
         </div>
       </div>
+      {feedItems.map((item)=>(
+        <p>{item.title}</p>
+      ))}
     </div>
   )
 }
