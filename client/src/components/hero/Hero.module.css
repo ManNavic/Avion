@@ -1,0 +1,134 @@
+.container {
+  height: 584px;
+  margin: 60px 80px 60px 80px;
+  display: flex;
+  flex-direction: row;
+}
+.right {
+  width: 520px;
+  height: 584px;
+  flex-shrink: 0;
+}
+.left {
+  width: 100%;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: column;
+}
+.bannerText {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: #fff;
+  font-family: Clash Display;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 60px;
+}
+.button {
+  background: rgba(249, 249, 249, 0.15);
+  color: #fff;
+
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  width: 170px;
+  height: 56px;
+  margin: 60px;
+  margin-top: 0;
+  border: 0;
+}
+.bannerDescription {
+  margin: 60px;
+  margin-top: auto;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.bannerDescriptionMobile {
+  margin: 60px;
+  margin-top: auto;
+  color: #fff;
+  font-family: Satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  display: none;
+}
+@media (max-width: 768px) {
+    .bannerDescription{
+        display: none;
+    }
+  .bannerDescriptionMobile {
+    display: block;
+    color: #fff;
+margin-bottom: 0;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 24px;
+    margin-bottom: 0;
+  }
+  .title {
+    color: #fff;
+margin: 24px;
+margin-top: 40px;
+margin-bottom: 0;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 44.8px */
+  }
+  .right{
+    display: none;
+  }
+  .container{
+    margin: 0;
+    height: 430px;
+  }
+  .button {
+    background: rgba(249, 249, 249, 0.15);
+    color: #fff;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 86%;
+    height: 48px;
+margin-right: 24px;
+margin-left: 24px;
+margin-bottom: 240x;
+    border: 0;
+    padding: 0;
+  }
+
+}
+@media (max-width: 1100px) {
+    .title{
+        margin: 30px;
+        font-size: 24px;
+    }
+    .button{
+        margin: 30px;
+    }
+    .bannerDescription{
+        margin: 30px;
+        font-size: 14px;
+    }
+    .right {
+       display: none;
+    }
+  }
