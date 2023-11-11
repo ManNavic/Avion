@@ -12,13 +12,13 @@ const FooterBottom = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/test');
+        const response = await fetch('https://modern-sun-hat-newt.cyclic.app/books');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
         setFeedItems(data);
-        console.log(data); // Log the fetched data directly
+        console.log(data); 
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
       }
