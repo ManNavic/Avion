@@ -5,9 +5,24 @@ import classes from './SingleProduct.module.css'
 const SingleProduct = () => {
   const [product, setProduct] = useState('')
   const [productDimensions, setProductDimensions] = useState('')
+  const [quantity, setQuantity] = useState(1);
   const location = useLocation()
   const productId = new URLSearchParams(location.search).get('itemId')
 
+
+  const plusQuantity = ()=>{
+    setQuantity(quantity +1)
+    console.log('clicked')
+    console.log(quantity)
+  }
+  const minusQuantity = ()=>{
+    if(quantity === 1 ){
+        return
+    }
+    console.log('clicked')
+    setQuantity(quantity -1)
+    console.log(quantity)
+  }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -69,9 +84,9 @@ const SingleProduct = () => {
         <div>
           <p className={classes.quantityTitle}>Quantity</p>
           <div className={classes.quantityContainer}>
-            <div className={classes.quantity}>-</div>
-            <div className={classes.quantity}>1</div>
-            <div className={classes.quantity}>+</div>
+            <div className={classes.quantity} onClick={()=>minusQuantity()}>-</div>
+            <div className={classes.quantity}>{quantity}</div>
+            <div className={classes.quantity} onClick={()=>plusQuantity()}>+</div>
           </div>
         </div>
         <div className={classes.buttonContainer}>
