@@ -1,0 +1,123 @@
+.container {
+    padding: 60px 80px;
+  }
+  .title {
+    color: #2a254b;
+    font-family: Clash Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .productContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  
+  }
+  .productImg {
+    width: 305px;
+    height: 375px;
+    transition: transform 0.6s;
+  }
+  .productImg:hover {
+    transform: scale(1.1);
+  }
+  .productTitle {
+    color: var(--Dark-Primary, #2a254b);
+  
+    /* Headings / H4 */
+    font-family: Clash Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 28px */
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .productPrice {
+    color: var(--Dark-Primary, #2a254b);
+  
+    /* Body / Large */
+    font-family: Satoshi;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    margin-top: 0;
+  }
+  .productsButton {
+    width: 170px;
+    height: 56px;
+    background-color: #f9f9f9;
+    color: #2a254b;
+    border: 0;
+    /* Body/Medium */
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin: auto;
+  }
+  .buttonContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 305px;
+    flex-grow: 1;
+    cursor: pointer;
+  } .card:nth-last-child(2) {
+    max-width: 330px;
+    flex-grow: 1;
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 60px 10px;
+    }
+    .productImg {
+      width: 150px;
+      height: 200px;
+      transition: transform 0.6s;
+    }
+    .productContainer {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .card {
+      width: 150px;
+    }
+    .productTitle {
+      color: var(--Dark-Primary, #2a254b);
+  
+      /* Headings / H4 */
+      font-family: Clash Display;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 28px */
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .productPrice {
+      color: var(--Dark-Primary, #2a254b);
+  
+      /* Body / Large */
+      font-family: Satoshi;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 27px */
+      margin-top: 0;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .productsButton {
+      width: 100%;
+    }
+  }
+  
