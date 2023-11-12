@@ -1,7 +1,12 @@
 import classes from './Hero.module.css';
 import HeroImg from '../../assets/images/heroImg.png';
-
+import { useNavigate } from 'react-router-dom';
 const Hero = () => {
+  const navigate = useNavigate()
+  const handleClick=(category)=>{
+      navigate(`/collections?category=${category}`);
+      window.scrollTo(0, 0)
+  }
   return (
     <div className={classes.container}>
       <div className={classes.left}>
@@ -14,7 +19,7 @@ const Hero = () => {
             retail brand with nice fonts, tasteful colors, and a beautiful way
             to display things digitally using modern web technologies.
           </p>
-          <button className={classes.button}>View collection</button>
+          <button className={classes.button} onClick={()=> handleClick('Furniture')}>View collection</button>
         </div>
         <div className={classes.bannerDescription}>
           <p>
