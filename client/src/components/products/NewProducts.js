@@ -1,8 +1,9 @@
 import classes from './Products.module.css'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 const NewProducts = () => {
   const [feedItems, setFeedItems] = useState([])
-
+const navigate = useNavigate()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,12 +33,15 @@ const NewProducts = () => {
     }
     return shuffledArray;
   };
+  const handleClick=(productId)=>{
+    navigate(`/products?itemId=${productId}`);
+}
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>New Products</h3>
       <div className={classes.productContainer}>
         {feedItems.slice(0, 6).map((item) => (
-          <div key={item._id} className={classes.card}>
+          <div key={item._id} className={classes.card} onClick={()=> handleClick(item._id)}>
             <img
               src={item.imageUrl}
               alt={item.title}
