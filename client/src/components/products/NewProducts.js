@@ -35,6 +35,7 @@ const navigate = useNavigate()
   };
   const handleClick=(productId)=>{
     navigate(`/products?itemId=${productId}`);
+    window.scrollTo(0, 0)
 }
   return (
     <div className={classes.container}>

@@ -25,6 +25,7 @@ const Products = () => {
   }, []) // eslint-disable-next-line react-hooks/exhaustive-deps
 const handleClick=(productId)=>{
     navigate(`/products?itemId=${productId}`);
+    window.scrollTo(0, 0)
 }
   return (
     <div className={classes.container}>
