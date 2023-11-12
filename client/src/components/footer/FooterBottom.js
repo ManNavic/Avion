@@ -5,30 +5,32 @@ import InstagramIcon from '../../assets/svg/Instagram'
 import SkypeIcon from '../../assets/svg/Skype'
 import TwitterIcon from '../../assets/svg/Twitter'
 import PinterestIcon from '../../assets/svg/Pinterest'
+import { useNavigate } from 'react-router-dom'
 const FooterBottom = () => {
+const navigate = useNavigate()
   
       return (
     <div className={classes.container}>
       <div className={classes.copyrights}>Copyright 2023 Avion LTD</div>
       <div className={classes.socials}>
-        <div className={classes.socialIcons}>
+        <a target='_blank' href="https://linkedin.com" className={classes.socialIcons} rel="noreferrer">
             <LinkedinIcon/>
-        </div>
-        <div className={classes.socialIcons}>
+        </a>
+        <a target='_blank'href="https://fb.com" className={classes.socialIcons} rel="noreferrer">
             <FacebookIcon/>
-        </div>
-        <div className={classes.socialIcons}>
+        </a>
+        <a target='_blank'href="https://instagram.com" className={classes.socialIcons} rel="noreferrer">
             <InstagramIcon/>
-        </div>
-        <div className={classes.socialIcons}>
+        </a>
+        <a target='_blank'href="https://skype.com" className={classes.socialIcons} rel="noreferrer">
             <SkypeIcon/>
-        </div>
-        <div className={classes.socialIcons}>
+        </a>
+        <a target='_blank'href="https://x.com" className={classes.socialIcons} rel="noreferrer">
             <TwitterIcon/>
-        </div>
-        <div className={classes.socialIcons}>
+        </a>
+        <a target='_blank'href="https://pinterest.com" className={classes.socialIcons} rel="noreferrer">
             <PinterestIcon/>
-        </div>
+        </a>
       </div>
     </div>
   )
