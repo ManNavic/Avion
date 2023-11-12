@@ -27,6 +27,10 @@ const handleClick=(productId)=>{
     navigate(`/products?itemId=${productId}`);
     window.scrollTo(0, 0)
 }
+const handleClickCollections=(category)=>{
+    navigate(`/collections?category=${category}`);
+    window.scrollTo(0, 0)
+}
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>New Tables</h3>
@@ -44,7 +48,7 @@ const handleClick=(productId)=>{
         ))}
       </div>
       <div className={classes.buttonContainer}>
-        <button className={classes.productsButton}>View collection</button>
+        <button className={classes.productsButton} onClick={()=> handleClickCollections('Table')}>View collection</button>
       </div>
       
     </div>

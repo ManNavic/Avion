@@ -5,22 +5,21 @@ import classes from './SingleProduct.module.css'
 const SingleProduct = () => {
   const [product, setProduct] = useState('')
   const [productDimensions, setProductDimensions] = useState('')
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1)
   const location = useLocation()
   const productId = new URLSearchParams(location.search).get('itemId')
 
-
-  const plusQuantity = ()=>{
-    setQuantity(quantity +1)
+  const plusQuantity = () => {
+    setQuantity(quantity + 1)
     console.log('clicked')
     console.log(quantity)
   }
-  const minusQuantity = ()=>{
-    if(quantity === 1 ){
-        return
+  const minusQuantity = () => {
+    if (quantity === 1) {
+      return
     }
     console.log('clicked')
-    setQuantity(quantity -1)
+    setQuantity(quantity - 1)
     console.log(quantity)
   }
   useEffect(() => {
@@ -65,28 +64,42 @@ const SingleProduct = () => {
         <p className={classes.descriptionTitle}>Product description</p>
         <p className={classes.description}>{product.description}</p>
         <div className={classes.dimensionsContainer}>
-          <p className={classes.dimensionsTitle}>Dimensions</p>
-          <div className={classes.dimensions}>
-            <div className={classes.singleDiv}>
-              <p className={classes.dimensionsSubTitle}>Height</p>
-              <p className={classes.dimensionsMesurments}>{productDimensions.height}</p>
-            </div>
-            <div className={classes.singleDiv}>
-              <p className={classes.dimensionsSubTitle}>Width</p>
-              <p className={classes.dimensionsMesurments}>{productDimensions.width}</p>
-            </div>
-            <div >
-              <p className={classes.dimensionsSubTitle}>Depth</p>
-              <p className={classes.dimensionsMesurments}>{productDimensions.depth}</p>
-            </div>
-          </div>
+          {productDimensions ? (
+            <>
+              <p className={classes.dimensionsTitle}>Dimensions</p>
+              <div className={classes.dimensions}>
+                <div className={classes.singleDiv}>
+                  <p className={classes.dimensionsSubTitle}>Height</p>
+                  <p className={classes.dimensionsMesurments}>
+                    {productDimensions.height}
+                  </p>
+                </div>
+                <div className={classes.singleDiv}>
+                  <p className={classes.dimensionsSubTitle}>Width</p>
+                  <p className={classes.dimensionsMesurments}>
+                    {productDimensions.width}
+                  </p>
+                </div>
+                <div>
+                  <p className={classes.dimensionsSubTitle}>Depth</p>
+                  <p className={classes.dimensionsMesurments}>
+                    {productDimensions.depth}
+                  </p>
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
         <div>
           <p className={classes.quantityTitle}>Quantity</p>
           <div className={classes.quantityContainer}>
-            <div className={classes.quantity} onClick={()=>minusQuantity()}>-</div>
+            <div className={classes.quantity} onClick={() => minusQuantity()}>
+              -
+            </div>
             <div className={classes.quantity}>{quantity}</div>
-            <div className={classes.quantity} onClick={()=>plusQuantity()}>+</div>
+            <div className={classes.quantity} onClick={() => plusQuantity()}>
+              +
+            </div>
           </div>
         </div>
         <div className={classes.buttonContainer}>

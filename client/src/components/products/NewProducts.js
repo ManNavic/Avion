@@ -43,6 +43,10 @@ const NewProducts = () => {
     navigate(`/products?itemId=${productId}`)
     window.scrollTo(0, 0)
   }
+  const handleClickCollections=(category)=>{
+    navigate(`/collections?category=${category}`);
+    window.scrollTo(0, 0)
+}
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>New Products</h3>
@@ -64,7 +68,7 @@ const NewProducts = () => {
         ))}
       </div>
       <div className={classes.buttonContainer}>
-        <button className={classes.productsButton}>View collection</button>
+        <button className={classes.productsButton} onClick={() => handleClickCollections('New')}>View collection</button>
       </div>
     </div>
   )
