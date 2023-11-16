@@ -2,11 +2,10 @@ import classes from './Products.module.css'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 const NewProducts = () => {
-
   const [feedItems, setFeedItems] = useState([])
 
   const navigate = useNavigate()
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,23 +29,17 @@ const NewProducts = () => {
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array]
-    for (let i = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffledArray[i], shuffledArray[j]] = [
-        shuffledArray[j],
-        shuffledArray[i]
-      ]
-    }
+    shuffledArray.sort(() => Math.random()- 0.5)
     return shuffledArray
   }
   const handleClick = (productId) => {
     navigate(`/products?itemId=${productId}`)
     window.scrollTo(0, 0)
   }
-  const handleClickCollections=(category)=>{
-    navigate(`/collections?category=${category}`);
+  const handleClickCollections = (category) => {
+    navigate(`/collections?category=${category}`)
     window.scrollTo(0, 0)
-}
+  }
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>New Products</h3>
@@ -68,7 +61,12 @@ const NewProducts = () => {
         ))}
       </div>
       <div className={classes.buttonContainer}>
-        <button className={classes.productsButton} onClick={() => handleClickCollections('New')}>View collection</button>
+        <button
+          className={classes.productsButton}
+          onClick={() => handleClickCollections('New')}
+        >
+          View collection
+        </button>
       </div>
     </div>
   )
