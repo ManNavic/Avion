@@ -5,7 +5,7 @@ import SearchIcon from '../../assets/svg/Search'
 import classes from './HeaderTop.module.css'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import Menu from '../login/Menu'
+import Menu from '../menu/Menu'
 
 const HeaderTop = () => {
   const token = localStorage.getItem('token')
