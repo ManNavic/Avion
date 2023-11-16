@@ -150,6 +150,7 @@
    .container{
     height: 570px;
     margin: 0;
+    justify-content: center;
    }
    .formContainer{
     margin: 0;
