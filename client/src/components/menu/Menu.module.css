@@ -1,10 +1,87 @@
 .container {
-    background-color: red;
+    background-color: #FFFFFF;
+    width: 200px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+right: 30px;
+top: 50px;
     transition: opacity 0.3s ease-in;
+    border: 1px solid  #dedede;
+    border-radius: 5px;
 }
 
+.iniatials{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #2a254b;
+    border-radius: 50px;
+    color: white;
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.userContainer{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    margin-bottom: 10px;
+    align-items: center;
+    border-bottom: 1px solid  #dedede;
+}
+.userName{
+    text-align: center;
+    font-family: Clash Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.iconContainer{
+    background-color: rgb(230, 227, 227);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+   
+}
+/* Menu.module.css */
+
+.loader {
+    margin-left: 20px;
+    border: 1px solid #f3f3f3; /* Light grey */
+    border-top: 1px solid #2a254b; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

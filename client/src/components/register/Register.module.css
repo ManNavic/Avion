@@ -62,6 +62,10 @@
 .span {
   color: var(--Dark-Primary, #2a254b);
 }
+input:focus {
+    outline: none;
+    border: 3px double #2a254b;
+}
 .registerTextRight {
   color: #8d8d8d;
   margin: 0;
@@ -86,21 +90,33 @@
   border: 1px solid #2a254b6c;
   padding-left: 15px;
   background: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 .inputName {
   height: 40px;
   font-family: Clash Display;
   border: 1px solid #2a254b6c;
   background: #fff;
-  width: 94%;
+  width: 80%;
   padding-left: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
-
+#lastName, #lastNameText{
+    margin-left: 20px;
+}
 .errors {
   height: 100px;
+  margin: 0 44px;
 }
+   .errorMsg{
+    margin: 0;
+    color: red;
+    font-size: 13px;
+   }
 .submit {
-  margin-left: 170px;
+  margin: auto;
   width: 236px;
   height: 54px;
   color: #fff;
@@ -121,7 +137,12 @@
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+.inputText:not(:empty) {
+    opacity: 1;
+  }
 .inputTextEmpty {
   margin: 0;
 }
@@ -146,6 +167,21 @@
     flex-direction: column;
   
 }
+.eye{
+  position: relative;
+  top: -282px;
+  right: -350px;
+  width: 30px;
+  cursor: pointer;
+}
+.eye2{
+  position: relative;
+  top: -240px;
+  right: -350px;
+  cursor: pointer;
+  width: 30px;
+}
+
 @media (max-width: 768px) {
    .container{
     height: 570px;
@@ -202,6 +238,14 @@
    }
    .empty{
     display: none;
+   }
+   .eye{
+    top: -268px;
+    right: -300px;
+   }
+   .eye2{
+    top: -235px;
+    right: -300px;
    }
   }
   

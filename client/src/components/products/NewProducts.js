@@ -40,6 +40,7 @@ const NewProducts = () => {
     navigate(`/collections?category=${category}`)
     window.scrollTo(0, 0)
   }
+  console.table(feedItems)
   return (
     <div className={classes.container}>
       <h3 className={classes.title}>New Products</h3>

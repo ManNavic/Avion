@@ -1,0 +1,239 @@
+.container {
+    margin: 60px 80px;
+    height: 800px;
+    background: lightgray 0% / cover no-repeat
+      url('../../assets/images/register-login.png');
+    display: flex;
+    flex-direction: row;
+  }
+  .textContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 44px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 90px;
+    margin-top: 75px;
+    width: 450px;
+    min-width: 450px;
+    height: 650px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.75);
+  }
+  .empty {
+    margin: 44x;
+    width: 80%;
+    color: red;
+  }
+  .left,
+  .right {
+    padding-right: 0;
+  }
+  .left {
+    width: 200px;
+    margin-right: 44px;
+  }
+  .registerText {
+    color: #000;
+  
+    font-family: Clash Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+  .registerTitle {
+    color: #000;
+    margin: 0;
+    font-family: Clash Display;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .span {
+    color: var(--Dark-Primary, #2a254b);
+  }
+  input:focus {
+      outline: none;
+      border: 3px double #2a254b;
+  }
+  .registerTextRight {
+    color: #8d8d8d;
+    margin: 0;
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .signIn {
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .input {
+    height: 40px;
+    font-family: Clash Display;
+    border: 1px solid #2a254b6c;
+    padding-left: 15px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .inputName {
+    height: 40px;
+    font-family: Clash Display;
+    border: 1px solid #2a254b6c;
+    background: #fff;
+    width: 80%;
+    padding-left: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  #lastName, #lastNameText{
+      margin-left: 20px;
+  }
+  .errors {
+    height: 100px;
+    margin: 0 44px;
+  }
+     .errorMsg{
+      margin: 0;
+      color: red;
+      font-size: 13px;
+     }
+  .submit {
+    margin: auto;
+    width: 236px;
+    height: 54px;
+    color: #fff;
+    background-color: #2a254b;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    border: 0;
+  }
+  .submit:disabled{
+    background-color: red;
+  }
+  .inputText {
+    height: 18px;
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  }
+  .inputText:not(:empty) {
+    opacity: 1;
+  }
+  .inputTextEmpty {
+    margin: 0;
+  }
+  .nameInputs {
+      margin: 0 44px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .emailInput {
+    margin: 0 44px;
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  .passwordInput{
+      margin: 0 44px;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .eye{
+      position: relative;
+      top: -205px;
+      right: -350px;
+    }
+  @media (max-width: 768px) {
+     .container{
+      height: 570px;
+      margin: 0;
+      justify-content: space-around;
+     }
+     .formContainer{
+      margin: 0;
+      border-radius: 0;
+      width: 360px;
+      min-width: 360px;
+      height: 570px;
+     }
+     .textContainer{
+      margin: 10px;
+     }
+     .submit{
+      width: 94%;
+      margin: 0;
+      margin-left: 10px;
+      margin-right: 10px
+     }
+     .form{
+      width: 100%;
+     }
+     .input, .inputName{
+      height: 30px;
+     }
+     .passwordInput, .emailInput,.nameInputs{
+      margin: 0 10px;
+     }
+     .inputName{
+      width: 83%;
+     }
+     #lastName,#lastNameText{
+      margin-left: 10px;
+     }
+     .registerText{
+      font-size: 16px;
+     }
+     .registerTitle{
+      font-size: 23px;
+     }
+     .registerTextRight{
+      font-size: 10px;
+     }
+     .errors{
+      margin: 0 10px;
+     }
+     .errorMsg{
+      margin: 0;
+      color: red;
+      font-size: 10px;
+     }
+     .empty{
+      display: none;
+     }
+     .eye{
+      top: -201px;
+      right: -310px;
+     }
+    }

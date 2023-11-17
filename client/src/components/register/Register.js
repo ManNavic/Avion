@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import classes from './Register.module.css'
+import { useNavigate } from 'react-router-dom'
+import NoShowIcon from '../../assets/svg/NoShow'
+import ShowIcon from '../../assets/svg/Show'
 const Register = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
@@ -10,6 +14,8 @@ const Register = () => {
   })
   const [passwordsMatch, setPasswordsMatch] = useState(true)
   const [regError, setRegError] = useState([])
+  const [showPassword, setShowPassword] = useState(false)  
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
   const handleInput = (e) => {
     const { name, value } = e.target
@@ -21,13 +27,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Check if passwords match
     if (formData.password !== formData.confirmPassword) {
       setPasswordsMatch(false)
       return
     }
-
-    // Clear the passwords match error if they match
     setPasswordsMatch(true)
     const { confirmPassword, ...formDataWithoutConfirm } = formData
 
@@ -51,19 +54,23 @@ const Register = () => {
           firstName: '',
           lastName: ''
         })
+        navigate('/login')
       } else {
         const responseData = await response.json()
 
         console.log('errordata', responseData.errors)
-        setRegError(responseData.errors) // Update the regError state with the error message
+        setRegError(responseData.errors)
       }
     } catch (error) {
       console.error('Registration failed:', error)
     }
-
-    console.log('Form data submitted:', formDataWithoutConfirm)
   }
-  console.log(formData)
+  const viewPassword = () => {
+    setShowPassword(!showPassword)
+  } 
+  const viewConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword)
+  }
   return (
     <div className={classes.container}>
       <div className={classes.empty}></div>
@@ -117,7 +124,7 @@ const Register = () => {
                 {formData.lastName !== '' ? 'Last name' : ''}
               </div>
               <input
-              id={classes.lastName}
+                id={classes.lastName}
                 className={classes.inputName}
                 placeholder="Last name"
                 type="text"
@@ -135,7 +142,7 @@ const Register = () => {
             <input
               className={classes.input}
               placeholder="Password"
-              type="password"
+              type={showPassword? 'text':'password'}
               name="password"
               value={formData.password}
               onChange={handleInput}
@@ -149,7 +156,7 @@ const Register = () => {
             <input
               className={classes.input}
               placeholder="Confirm password"
-              type="password"
+              type={showConfirmPassword? 'text':'password'}
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleInput}
@@ -157,7 +164,9 @@ const Register = () => {
           </div>
 
           <div className={classes.errors}>
-            {!passwordsMatch && <p className={classes.errorMsg}>Password does not match</p>}
+            {!passwordsMatch && (
+              <p className={classes.errorMsg}>Password does not match</p>
+            )}
             {regError.length > 0 && (
               <p>
                 {regError.map((item) => (
@@ -168,8 +177,15 @@ const Register = () => {
           </div>
 
           <button type="submit" className={classes.submit}>
-            Submit
+            Sign up
           </button>
+          <div onClick={viewPassword} className={classes.eye}>
+              {showPassword ? <ShowIcon/> : <NoShowIcon/>}
+              </div>
+
+              <div onClick={viewConfirmPassword} className={classes.eye2}>
+              {showConfirmPassword ? <ShowIcon/> : <NoShowIcon/>}
+              </div>
         </form>
       </div>
     </div>
