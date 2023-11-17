@@ -16,3 +16,11 @@ margin: 0;
     font-size: 80px;
     margin: 0;
 }
+@media (max-width: 768px) {
+.number{
+    font-size: 100px;
+}
+.text{
+    font-size: 40px;
+}
+   }
