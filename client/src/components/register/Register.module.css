@@ -169,15 +169,15 @@ input:focus {
 }
 .eye{
   position: relative;
-  top: -282px;
-  right: -350px;
+  top: -278px;
+  right: -370px;
   width: 30px;
   cursor: pointer;
 }
 .eye2{
   position: relative;
-  top: -240px;
-  right: -350px;
+  top: -226px;
+  right: -370px;
   cursor: pointer;
   width: 30px;
 }
@@ -240,12 +240,12 @@ input:focus {
     display: none;
    }
    .eye{
-    top: -268px;
-    right: -300px;
+    top: -264px;
+    right: -315px;
    }
    .eye2{
-    top: -235px;
-    right: -300px;
+    top: -222px;
+    right: -315px;
    }
   }
   

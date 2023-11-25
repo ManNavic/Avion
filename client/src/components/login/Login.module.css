@@ -172,8 +172,8 @@
     }
     .eye{
       position: relative;
-      top: -205px;
-      right: -350px;
+      top: -201px;
+      right: -370px;
     }
   @media (max-width: 768px) {
      .container{
@@ -233,7 +233,7 @@
       display: none;
      }
      .eye{
-      top: -201px;
-      right: -310px;
+      top: -196px;
+      right: -315px;
      }
     }
