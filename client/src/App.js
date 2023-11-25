@@ -6,6 +6,7 @@ import Collections from './pages/Collections';
 import RegisterPage from './pages/Register';
 import LoginPage from './pages/Login';
 import Page404 from './pages/404';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const token = localStorage.getItem('token')
@@ -24,6 +25,16 @@ function App() {
             <Navigate to="/" />
           ) : (
             <LoginPage />
+          )
+        }
+      />
+       <Route
+        path="/profile"
+        element={
+          !token ? (
+            <Navigate to="/" />
+          ) : (
+            <ProfilePage />
           )
         }
       />
