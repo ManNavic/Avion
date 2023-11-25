@@ -18,7 +18,7 @@ const ProfileIcon = () => {
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-380.000000, -2199.000000)"
-          fill="#000000"
+          fill="#9494b5"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path
