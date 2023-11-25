@@ -68,7 +68,7 @@ const Menu = ({ closeLogin }) => {
           <hr />
         </div>
         <div className={classes.menuContainer}>
-          <div href="/profile" className={classes.itemContainer}>
+          <div className={classes.itemContainer} onClick={()=> navigate('/profile')}>
             <div className={classes.iconContainer}>
               <ProfileIcon />
             </div>

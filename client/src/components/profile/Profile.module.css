@@ -1,0 +1,87 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.input {
+    height: 40px;
+    width: 300px;
+    font-family: Clash Display;
+    border: 1px solid #2a254b6c;
+    padding-left: 15px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  .lock{
+    position: relative;
+    top: -47px;
+    left: 270px;
+    width: 20px;
+  }
+  .inputText {
+    height: 18px;
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .inputText:not(:empty) {
+      opacity: 1;
+    }
+    .inputContainer{
+        height: 70px;
+    }
+    .submit{
+        width: 150px;
+        height: 45px;
+        color: #fff;
+        background-color: #2a254b;
+        font-family: Satoshi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        border: 0;
+    }
+    .submitContainer{
+        width: 320px;
+        display: flex;
+        margin-top: 15px;
+
+    }
+    .eye{
+        position: relative;
+        top: -50px;
+        left: 270px;
+        width: 20px;
+    }
+    .form {
+        margin-left: 150px
+    }
+    .label{
+        color: var(--Dark-Primary, #2a254b);
+        font-family: Clash Display;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    @media (max-width: 768px) {
+  
+       }
+       @media (max-width: 1100px) {
+       .container{
+        flex-direction: column;
+       }
+       .form {
+        margin-top: 50px;
+        margin-left: 0px
+    }
+       }
+       
