@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: row;
+
+}
+.title{
+    margin: 0;
+    margin-bottom: 50px;
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.shipping, .billing{
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.addressLine{
+    margin:0;
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+.edit{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    color: var(--Dark-Primary, #2a254b);
+    font-family: Clash Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: underline;
+    height: 30px;
+    cursor: pointer;
+}
+.edit > p{
+    margin: 0;
+}

@@ -15,7 +15,6 @@ setRightComponent(value)
             return <Address/>
         }else return <Profile/>
     }
-    console.log(rightComponent)
   return (
     <div className={classes.container}>
       <div className={classes.left}>

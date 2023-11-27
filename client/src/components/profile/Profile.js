@@ -35,8 +35,7 @@ const Profile = () => {
       }
     ]
   })
-  console.log('usertosend', userToSend)
-  console.log('testusertosend', testUserToSend)
+
   const [lockEmail, setLockEmail] = useState(true)
   const [lockBirthday, setLockBirthday] = useState(true)
   const [lockFisrt, setLockFisrt] = useState(true)
@@ -49,7 +48,6 @@ const Profile = () => {
     confirmPassword: ''
   })
   const [passwordsMatch, setPasswordsMatch] = useState(true)
-  console.log(userToSend)
   const handlePasswordInput = (e) => {
     const { name, value } = e.target
     setPasswordChange((prevPasswordChange) => ({
@@ -201,7 +199,7 @@ const Profile = () => {
       console.error('change failed:', error)
     }
   }
-  console.log('first', userToSend.profile[0].firstName)
+
   return (
     <div className={classes.container}>
       <form onSubmit={handleSubmit}>
