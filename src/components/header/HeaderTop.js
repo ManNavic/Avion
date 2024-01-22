@@ -13,7 +13,6 @@ const HeaderTop = () => {
   const [openMenuModal, setOpenMenuModal] = useState(false)
 
   const handleMenu = () => {
-    console.log('clicked')
     navigator('/register')
   }
 
