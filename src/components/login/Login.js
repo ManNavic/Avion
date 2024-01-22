@@ -39,6 +39,7 @@ const Login = () => {
         setToken(data)
         localStorage.setItem('token', data)
         navigate('/')
+        window.location.reload(true)
       } else {
         const loginResponse = await response.json()
         console.log('res', loginResponse)

@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import classes from './Address.module.css'
 const Address = () => {
   const [user, setUser] = useState({})
+  const [editAddress, setEditAddress] = useState(false)
 
   const token = localStorage.getItem('token')
-  console.log("user",user.profile)
+  console.log('user', user.profile)
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -33,29 +34,44 @@ const Address = () => {
 
     fetchUser()
   }, [])
+  const handleEdit = () => {
+    setEditAddress(!editAddress)
+  }
+  console.log('edit', editAddress)
   return (
-    <div className={classes.container}>
-      <div className={classes.shipping}>
-        <div>
-           <h2 className={classes.title}>Shipping address</h2>
-        <p className={classes.addressLine}>River Drive 1418</p>
-        <p className={classes.addressLine}>Cottonhall </p>
-        <p className={classes.addressLine}>CA 9622</p>
-        <p className={classes.addressLine}>United States</p>
+    <>
+      {!editAddress && (
+        <div className={classes.container}>
+          <div className={classes.shipping}>
+            <div>
+              <h2 className={classes.title}>Shipping address</h2>
+              <p className={classes.addressLine}>River Drive 1418</p>
+              <p className={classes.addressLine}>Cottonhall </p>
+              <p className={classes.addressLine}>CA 9622</p>
+              <p className={classes.addressLine}>United States</p>
+            </div>
+            <div className={classes.edit} onClick={handleEdit}>
+              <p>Edit</p>
+            </div>
+          </div>
+          <div className={classes.billing}>
+            <div>
+              <h2 className={classes.title}>Billing address</h2>
+              <p className={classes.addressLine}>River Drive 1418</p>
+              <p className={classes.addressLine}>Cottonhall </p>
+              <p className={classes.addressLine}>CA 9622</p>
+              <p className={classes.addressLine}>United States</p>
+            </div>
+            <div className={classes.edit} onClick={handleEdit}>
+              <p>Edit</p>
+            </div>
+          </div>
         </div>
-       <div className={classes.edit}><p>Edit</p></div>
-      </div>
-      <div className={classes.billing}>
-      <div>
-           <h2 className={classes.title}>Shipping address</h2>
-        <p className={classes.addressLine}>River Drive 1418</p>
-        <p className={classes.addressLine}>Cottonhall </p>
-        <p className={classes.addressLine}>CA 9622</p>
-        <p className={classes.addressLine}>United States</p>
-        </div>
-       <div className={classes.edit}><p>Edit</p></div>
-      </div>
-    </div>
+      )}
+      {editAddress &&(
+        <div>hi</div>
+      )}
+    </>
   )
 }
 export default Address
